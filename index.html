@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Vũ Duy | Portfolio Biên Phiên Dịch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS TOÀN CỤC - VIBE RETRO MINIMALIST */
+        :root {
+            --bg-color: #F4ECD8; 
+            --text-color: #2C2C2C; 
+            --accent-color: #7A3E3E; 
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, .typewriter {
+            font-family: 'Courier Prime', monospace;
+            font-weight: 700;
+        }
+
+        /* HEADER & HERO SECTION */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 1px solid rgba(44, 44, 44, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p.subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            border-bottom: 1px dashed var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* PORTFOLIO SECTION */
+        section.portfolio {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section.portfolio h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* DÀN TRANG GRID CHO CÁC BÀI DỊCH */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .card {
+            border: 1px solid var(--text-color);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--text-color);
+        }
+
+        .card-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: inline-block;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4A4A4A;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: none;
+        }
+
+        .btn:hover {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* STYLE CHO PHẦN LIST XỔ XUỐNG */
+        .details-list {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--text-color);
+        }
+
+        .details-list ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .details-list li {
+            margin-bottom: 12px;
+        }
+
+        .details-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.95rem;
+            display: block;
+            position: relative;
+            padding-left: 15px;
+            transition: color 0.2s;
+        }
+
+        .details-list a::before {
+            content: "»";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .details-list a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(44, 44, 44, 0.2);
+        }
+
+        footer .russian-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lê Vũ Duy</h1>
+        <p class="subtitle">Russian Translator - Biên phiên dịch Tiếng Nga - Việt </p>
+        <div class="contact-info">
+            <a href="mailto:tngoctu09@gmail.com">tngoctu09@gmail.com</a>
+            <a href="#">Nam Định / Hà Nội</a>
+            <a href="#">SĐT: 0337993640</a>
+        </div>
+        <p style="margin-top: 30px; font-weight: 300; font-size: 1.05rem;">
+            Здравствуйте! Mình là Duy - sinh viên năm 2 Ngành Ngôn ngữ Nga . 
+            Mình tập trung vào việc tạo ra các bản dịch mượt mà, chuẩn văn phong, đồng thời kết hợp kỹ năng 
+            xử lý đồ họa (DTP) để giữ trọn vẹn giá trị thẩm mỹ của tài liệu gốc. Tỉ mỉ trong từng câu chữ, 
+            chỉn chu trong từng khung hình.
+        </p>
+    </header>
+
+    <section class="portfolio">
+        <h2>[ Dự Án Nổi Bật ]</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <span class="card-category">Dịch thuật & DTP</span>
+                <h3>Việt hóa bài báo trang РИА Новости </h3>
+                <p>Biên dịch lại các bài báo mới nhất hàng ngày trên kênh bằng ngôn ngữ chuẩn xác và sát nghĩa nhất có thể.</p>
+                <button class="btn" onclick="toggleDetails('news-list', this)">Xem chi tiết -></button>
+                
+                <div id="news-list" class="details-list">
+                    <ul>
+                        <li><a href="#" target="_blank">1. Bản dịch bài báo Kinh tế (PDF)</a></li>
+                        <li><a href="https://drive.google.com/file/d/1ZKl3yTzwirtnmWGQtnti-q4QHagFzycq/view?usp=drive_link">2. Bản dịch bài báo Chiến sự Nga - Ukraina (PDF)</a></li>
+                        <li><a href="#" target="_blank">3. Bản dịch tin vắn Công nghệ (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="card-category">Dịch thuật Thể Hình</span>
+                <h3>Biên phiên dịch tin tức Fitness|Gym </h3>
+                <p>Biên dịch bài viết chuyên sâu về phương pháp tập luyện và dinh dưỡng từ chuyên trang thể hình uy tín của Nga.</p>
+                <button class="btn" onclick="toggleDetails('fitness-list', this)">Xem chi tiết -></button>
+
+                <div id="fitness-list" class="details-list">
+                    <ul>
+                        <li><a href="#" target="_blank">1. Phân tích chi tiết lịch tập Upper/Lower (PDF)</a></li>
+                        <li><a href="#" target="_blank">2. Hướng dẫn dinh dưỡng Lean Bulk (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p class="russian-quote typewriter">Спасибо за уделенное время.</p>
+        <p style="font-size: 0.8rem; margin-top: 20px;">© 2026 Lê Vũ Duy.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(listId, buttonElement) {
+            var list = document.getElementById(listId);
+            
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+                buttonElement.innerHTML = "Thu gọn <-";
+            } else {
+                list.style.display = "none";
+                buttonElement.innerHTML = "Xem chi tiết ->";
+            }
+        }
+    </script>
+
+</body>
+</html>
